@@ -1,0 +1,98 @@
+body, html {height: 100%;}
+body {
+    align-items: center;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 12px;
+    justify-items: center;
+    line-height: 1.5;
+    margin: 0;
+}
+button {
+    align-items: center;
+    background: none;
+    border: none;
+    color: hsl(237, 12%, 33%);
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0;
+    width: 100%;
+}
+button:hover {
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+hr {
+    border: none;
+    border-top: 2px solid hsl(240, 5%, 91%);
+    margin: 1rem 0;
+}
+h1 { font-size: 40px;}
+main {width: 100%;}
+p { color: hsl(240, 6%, 50%);}
+.active button{ font-weight: 700; }
+.active button:hover { color: hsl(237, 12%, 33%); }
+.active img {
+    transform: rotate(180deg);
+    transition: transform .2s .1s;
+}
+.active .answer { display: initial; }
+.answer { display: none; }
+.attribution { font-size: 11px; text-align: center; color: hsl(237, 12%, 33%);}
+.attribution a { color: hsl(273, 100%, 74%); }
+.box {
+    position: absolute;
+    left: 0;
+    transform: translate(-55% , 25%);
+}
+.container {
+    background-color: #fff;
+    border-radius: 25px;
+    width: 55rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+}
+.faq { padding: 3rem 5rem 4rem 0;}
+.illustrations { overflow: hidden;}
+.images {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: -36.5rem;
+    background-position-y: -20rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.woman-dk { transform: translateX(-20%); }
+.woman-mb { display: none;}
+
+@media screen and (max-width: 1100px) {
+    main {padding-top: 7rem; }
+    h1 { text-align: center;}
+    .container {
+        grid-template-columns: auto;
+        width: 20rem;
+    }
+    .faq { padding: 0 2rem 2rem; }
+    .illustrations {overflow: visible;}
+    .images {
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-position-x: 2.5rem;
+        background-position-y: 50%;
+        height: 6.5rem;
+    }
+    .woman-dk { display: none; }
+    .woman-mb { 
+        display: initial;
+        left: 2.5rem;
+        position: absolute;
+        top: 0;
+        transform: translateY(-60%);
+        width: 75%;
+    }
+    .box { display: none;}
+}
